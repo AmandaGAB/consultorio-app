@@ -12,6 +12,8 @@ import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.component';
+import { CadastrarPacienteComponent } from './cadastrar-paciente/cadastrar-paciente.component';
+import {RouterModule} from "@angular/router";
 
 
 
@@ -19,19 +21,21 @@ import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.co
   declarations: [
     MedicosComponent,
     PacientesComponent,
-    CadastrarMedicoComponent
+    CadastrarMedicoComponent,
+    CadastrarPacienteComponent
   ],
-  imports: [
-    CommonModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatTableModule,
-    MatCardModule,
-    MatIconModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatInputModule,
-    FlexLayoutModule
-  ]
+    imports: [
+        CommonModule,
+        MatMenuModule,
+        MatButtonModule,
+        MatTableModule,
+        MatCardModule,
+        MatIconModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        FlexLayoutModule,
+        RouterModule
+    ]
 })
 export class ComponentsModule { }

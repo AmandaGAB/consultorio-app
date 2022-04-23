@@ -1,58 +1,70 @@
+
 <div class="menu">
   <div class="main-content">
     <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">
       <button [routerLink]="['/medicos']" mat-button>Médico</button>
-      <button [routerLink]="['/pacientes']" mat-button >Pacientes</button>
+      <button [routerLink]="['/pacientes']" mat-button>Pacientes</button>
       <button mat-button>Consultas</button>
       <button mat-button>Agendamento</button>
     </div>
   </div>
 
 
-  <mat-card  class="mainContent">
+<mat-card  class="mainContent">
   <mat-card-header class="mainContent" fxLayout="row wrap"  fxLayoutAlign="space-around center" >
-    <mat-card-title >Inserir Medico</mat-card-title>
+    <mat-card-title >Inserir Paciente</mat-card-title>
   </mat-card-header>
-  <mat-card-content class="form-medico">
+  <mat-card-content class="form-paciente">
 
-    <div fxLayout="row wrap"  fxLayoutAlign="space-around center"  >
+    <div fxLayout="row wrap"  fxLayoutAlign="space-around center" >
       <div>
         <p >
           <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>CRM</mat-label>
-            <input matInput [(ngModel)]="medico.crm" placeholder="digite o crm">
+            <mat-label>Data de Nascimento</mat-label>
+            <input matInput [(ngModel)]="paciente.dataDeNascimento" placeholder="digite a data de nascimento">
 
           </mat-form-field>
         </p>
 
         <p >
           <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>Nome</mat-label>
-            <input matInput [(ngModel)]="medico.nome" placeholder="dinggite o nome">
+            <mat-label>CPF</mat-label>
+            <input matInput [(ngModel)]="paciente.cpf" placeholder="dinggite o cpf">
           </mat-form-field>
         </p>
       </div>
       <div>
-        <p>
-          <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>Especialidade</mat-label>
-            <input  matInput [(ngModel)]="medico.especialidade" placeholder="digite a especialidade">
-          </mat-form-field>
-        </p>
-
         <p>
           <mat-form-field appearance="fill" class="mat-form-simples">
             <mat-label>Telefone</mat-label>
-            <input matInput [(ngModel)]="medico.telefone" placeholder="Digite o telefone">
+            <input  matInput [(ngModel)]="paciente.telefone" placeholder="digite a telefone">
           </mat-form-field>
         </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="mat-form-simples">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="paciente.email" placeholder="Digite o email">
+          </mat-form-field>
+        </p>
+
       </div>
+    <div>
       <p>
         <mat-form-field appearance="fill" class="mat-form-simples">
-          <mat-label>Email</mat-label>
-          <input matInput [(ngModel)]="medico.email" placeholder="Digite o email">
+          <mat-label>Sexo</mat-label>
+          <input matInput [(ngModel)]="paciente.sexo" placeholder="Digite o sexo">
         </mat-form-field>
       </p>
+
+      <p>
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Endereço</mat-label>
+          <input matInput [(ngModel)]="paciente.endereco" placeholder="Digite o sexo">
+        </mat-form-field>
+      </p>
+    </div>
+
     </div>
   </mat-card-content>
   <mat-card-footer align="center">

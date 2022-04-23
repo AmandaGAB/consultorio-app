@@ -1,7 +1,7 @@
 <div class="containerMedico">
   <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">
-    <button mat-button>Médico</button>
-    <button mat-button>Pacientes</button>
+    <button [routerLink]="['/medicos']" mat-button>Médico</button>
+    <button [routerLink]="['/pacientes']" mat-button>Pacientes</button>
     <button mat-button>Consultas</button>
     <button mat-button>Agendamento</button>
   </div>

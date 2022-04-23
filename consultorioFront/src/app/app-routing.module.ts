@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {MedicosComponent} from "./components/medicos/medicos.component";
 import {CadastrarMedicoComponent} from "./components/cadastrar-medico/cadastrar-medico.component";
+import {CadastrarPacienteComponent} from "./components/cadastrar-paciente/cadastrar-paciente.component";
+import {PacientesComponent} from "./components/pacientes/pacientes.component";
 
 const routes: Routes = [
   {path: 'medicos', component: MedicosComponent},
   {path: 'medicos/cadastrar/:id', component: CadastrarMedicoComponent},
-  {path: 'pacientes', component: MedicosComponent},
+  {path: 'pacientes/cadastrar/:id', component: CadastrarPacienteComponent},
+  {path: 'pacientes', component: PacientesComponent},
 ];
 
 @NgModule({
