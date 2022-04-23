@@ -12,7 +12,7 @@ export class MedicosComponent implements OnInit {
 
   medicos = Array<Medico>();
 
-  displayedColumns: string[] = ['crm', 'nome', 'especialidade', 'telefone', 'email'];
+  displayedColumns: string[] = ['crm', 'nome', 'especialidade', 'telefone', 'email', 'opções'];
 
   constructor(private MedicoService: MedicoService, private roteador: Router) {
 
@@ -30,7 +30,7 @@ export class MedicosComponent implements OnInit {
 
   editar(medico: Medico): void {
 
-    this.roteador.navigate(['cadastrarMedico', medico.id])
+    this.roteador.navigate(['medicos/cadastrar', medico.id])
 
   }
 

@@ -11,13 +11,15 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.component';
 
 
 
 @NgModule({
   declarations: [
     MedicosComponent,
-    PacientesComponent
+    PacientesComponent,
+    CadastrarMedicoComponent
   ],
   imports: [
     CommonModule,

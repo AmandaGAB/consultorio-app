@@ -1,0 +1,52 @@
+<mat-card  >
+  <mat-card-header>
+    <mat-card-title >Inserir Medico</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div fxLayout="row wrap"  >
+      <p >
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>CRM</mat-label>
+          <input matInput [(ngModel)]="medico.crm" placeholder="digite o crm">
+
+        </mat-form-field>
+      </p>
+
+      <p >
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="medico.nome" placeholder="dinggite o nome">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Especialidade</mat-label>
+          <input  matInput [(ngModel)]="medico.especialidade" placeholder="digite a especialidade">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Telefone</mat-label>
+          <input matInput [(ngModel)]="medico.telefone" placeholder="Digite o telefone">
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="medico.email" placeholder="Digite o email">
+        </mat-form-field>
+      </p>
+    </div>
+  </mat-card-content>
+  <mat-card-footer align="center">
+
+    <button mat-raised-button mat-icon-button color="primary" (click)="inserirMedico()">
+      <mat-icon *ngIf="operacaoCadastro">person_add</mat-icon>
+      <mat-icon *ngIf="!operacaoCadastro">edit</mat-icon>
+    </button>
+
+  </mat-card-footer>
+</mat-card>
