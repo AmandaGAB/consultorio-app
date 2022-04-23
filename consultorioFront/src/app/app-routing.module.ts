@@ -8,7 +8,9 @@ import {PacientesComponent} from "./components/pacientes/pacientes.component";
 const routes: Routes = [
   {path: 'medicos', component: MedicosComponent},
   {path: 'medicos/cadastrar/:id', component: CadastrarMedicoComponent},
+  {path: 'cadastrarMedicos', component: CadastrarMedicoComponent},
   {path: 'pacientes/cadastrar/:id', component: CadastrarPacienteComponent},
+  {path: 'cadastrarPacientes', component: CadastrarPacienteComponent},
   {path: 'pacientes', component: PacientesComponent},
 ];
 
