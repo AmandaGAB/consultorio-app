@@ -17,59 +17,109 @@
   </div>
 
 
-  <mat-card  class="mainContent">
-  <mat-card-header class="mainContent" fxLayout="row wrap"  fxLayoutAlign="space-around center" >
-    <mat-card-title >Inserir Medico</mat-card-title>
-  </mat-card-header>
-  <mat-card-content class="form-medico">
+  <!--  <mat-card  class="mainContent">-->
+  <!--  <mat-card-header class="mainContent" fxLayout="row wrap"  fxLayoutAlign="space-around center" >-->
+  <!--    <mat-card-title >Inserir Medico</mat-card-title>-->
+  <!--  </mat-card-header>-->
+  <!--  <mat-card-content class="form-medico">-->
 
-    <div fxLayout="row wrap"  fxLayoutAlign="space-around center"  >
-      <div>
-        <p >
-          <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>CRM</mat-label>
-            <input matInput [(ngModel)]="medico.crm" placeholder="digite o crm">
+  <!--    <div fxLayout="row wrap"  fxLayoutAlign="space-around center"  >-->
+  <!--      <div>-->
+  <!--        <p >-->
+  <!--          <mat-form-field appearance="fill" class="mat-form-simples">-->
+  <!--            <mat-label>CRM</mat-label>-->
+  <!--            <input matInput [(ngModel)]="medico.crm" placeholder="digite o crm">-->
 
+  <!--          </mat-form-field>-->
+  <!--        </p>-->
+
+  <!--        <p >-->
+  <!--          <mat-form-field appearance="fill" class="mat-form-simples">-->
+  <!--            <mat-label>Nome</mat-label>-->
+  <!--            <input matInput [(ngModel)]="medico.nome" placeholder="dinggite o nome">-->
+  <!--          </mat-form-field>-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <div>-->
+  <!--        <p>-->
+  <!--          <mat-form-field appearance="fill" class="mat-form-simples">-->
+  <!--            <mat-label>Especialidade</mat-label>-->
+  <!--            <input  matInput [(ngModel)]="medico.especialidade" placeholder="digite a especialidade">-->
+  <!--          </mat-form-field>-->
+  <!--        </p>-->
+
+  <!--        <p>-->
+  <!--          <mat-form-field appearance="fill" class="mat-form-simples">-->
+  <!--            <mat-label>Telefone</mat-label>-->
+  <!--            <input matInput [(ngModel)]="medico.telefone" placeholder="Digite o telefone">-->
+  <!--          </mat-form-field>-->
+  <!--        </p>-->
+  <!--      </div>-->
+  <!--      <p>-->
+  <!--        <mat-form-field appearance="fill" class="mat-form-simples">-->
+  <!--          <mat-label>Email</mat-label>-->
+  <!--          <input matInput [(ngModel)]="medico.email" placeholder="Digite o email">-->
+  <!--        </mat-form-field>-->
+  <!--      </p>-->
+  <!--    </div>-->
+  <!--  </mat-card-content>-->
+  <!--  <mat-card-footer align="center">-->
+
+  <!--    <button mat-raised-button mat-icon-button color="primary" (click)="inserirMedico()">-->
+  <!--      <mat-icon *ngIf="operacaoCadastro">person_add</mat-icon>-->
+  <!--      <mat-icon *ngIf="!operacaoCadastro">edit</mat-icon>-->
+  <!--    </button>-->
+
+  <!--  </mat-card-footer>-->
+  <!--</mat-card>-->
+  <!--</div>-->
+
+  <div id="main">
+    <mat-card class="example-card">
+      <!--    fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center"-->
+      <h2 class="texto_azul titulo-login">Inserir Medico</h2>
+
+      <!--Inicio do Form>-->
+      <mat-card-content >
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label class="texto_azul">Nome</mat-label>
+            <input autocomplete="on" name="nome" [(ngModel)]="medico.nome" matInput placeholder="digite deu nome">
           </mat-form-field>
-        </p>
 
-        <p >
-          <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>Nome</mat-label>
-            <input matInput [(ngModel)]="medico.nome" placeholder="dinggite o nome">
+          <!--CRM-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label class="texto_azul">CRM</mat-label>
+            <input autocomplete="on" name="crm" type="text"  [(ngModel)]="medico.crm" matInput  placeholder="Digite o seu CPF"value="">
           </mat-form-field>
-        </p>
-      </div>
-      <div>
-        <p>
-          <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>Especialidade</mat-label>
-            <input  matInput [(ngModel)]="medico.especialidade" placeholder="digite a especialidade">
+
+          <!--Especialidade-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label class="texto_azul">Especialidade</mat-label>
+            <input autocomplete="on" name="especialidade" type="text"[(ngModel)]="medico.especialidade" matInput placeholder="Digite sua especialidade" value="">
           </mat-form-field>
-        </p>
 
-        <p>
-          <mat-form-field appearance="fill" class="mat-form-simples">
-            <mat-label>Telefone</mat-label>
-            <input matInput [(ngModel)]="medico.telefone" placeholder="Digite o telefone">
+          <!--assistencia_id_assistencia-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label class="texto_azul">Telefone</mat-label>
+            <input autocomplete="on" name="telefone" type="text" [(ngModel)]="medico.telefone" matInput  placeholder="Digite o número do seu telefone"value="" >
           </mat-form-field>
-        </p>
-      </div>
-      <p>
-        <mat-form-field appearance="fill" class="mat-form-simples">
-          <mat-label>Email</mat-label>
-          <input matInput [(ngModel)]="medico.email" placeholder="Digite o email">
-        </mat-form-field>
-      </p>
-    </div>
-  </mat-card-content>
-  <mat-card-footer align="center">
 
-    <button mat-raised-button mat-icon-button color="primary" (click)="inserirMedico()">
-      <mat-icon *ngIf="operacaoCadastro">person_add</mat-icon>
-      <mat-icon *ngIf="!operacaoCadastro">edit</mat-icon>
-    </button>
+          <!--E-mail-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label class="texto_azul">E-mail</mat-label>
+            <input autocomplete="on" name="email" type="text"[(ngModel)]="medico.email" matInput placeholder="Digite seu e-mail" value="">
+          </mat-form-field>
 
-  </mat-card-footer>
-</mat-card>
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button mat-icon-button color="blue" id="but" (click)="inserirMedico()">
+          <mat-icon *ngIf="operacaoCadastro">person_add</mat-icon>
+          <mat-icon *ngIf="!operacaoCadastro">edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

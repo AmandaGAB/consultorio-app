@@ -28,7 +28,7 @@ export class CadastrarPacienteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  inserirMedico(): void {
+  inserirPaciente(): void {
 
     if (this.paciente.id) {
       this.PacienteService.atualizar(this.paciente).subscribe(paciente => {

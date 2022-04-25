@@ -1,18 +1,23 @@
 <div class="containerMedico">
-  <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">
-    <button [matMenuTriggerFor]="menu1" mat-button>Médico</button>
-    <mat-menu #menu1="matMenu">
-      <button mat-menu-item [routerLink]="['/medicos']">Listagem de Médicos</button>
-      <button mat-menu-item [routerLink]="['/cadastrarMedicos']">Cadastrar Médico</button>
-    </mat-menu>
-    <button [matMenuTriggerFor]="menu2" mat-button>Pacientes</button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item [routerLink]="['/pacientes']">Listagem de Pacientes</button>
-      <button mat-menu-item [routerLink]="['/cadastrarPacientes']">Cadastrar Paciente</button>
-    </mat-menu>
-    <button mat-button>Consultas</button>
-    <button mat-button>Agendamento</button>
+<div class="menu">
+  <div class="main-content">
+    <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">
+      <button [matMenuTriggerFor]="menu1" mat-button>Médico</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item [routerLink]="['/medicos']">Listagem de Médicos</button>
+        <button mat-menu-item [routerLink]="['/cadastrarMedicos']">Cadastrar Médico</button>
+      </mat-menu>
+      <button [matMenuTriggerFor]="menu2" mat-button>Pacientes</button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item [routerLink]="['/pacientes']">Listagem de Pacientes</button>
+        <button mat-menu-item [routerLink]="['/cadastrarPacientes']">Cadastrar Paciente</button>
+      </mat-menu>
+      <button mat-button>Consultas</button>
+      <button mat-button>Agendamento</button>
+    </div>
   </div>
+</div>
+
   <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px" class="listagemMedicos">
     <mat-card class="listagem"><mat-card-title   align="center">Listagem de Médicos</mat-card-title></mat-card>
     <table  mat-table [dataSource]="medicos" >
@@ -62,3 +67,4 @@
 
   </div>
 </div>
+
