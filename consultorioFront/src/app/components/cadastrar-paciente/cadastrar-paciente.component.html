@@ -26,7 +26,10 @@
         <!--Inicio do Form>-->
         <mat-card-content >
           <form class="example-form">
-
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label class="texto_azul">Nome</mat-label>
+              <input autocomplete="on" name="nome" [(ngModel)]="paciente.nome" matInput placeholder="Digite o seu nome completo">
+            </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label class="texto_azul">CPF</mat-label>
               <input autocomplete="on" name="cpf" [(ngModel)]="paciente.cpf" matInput placeholder="digite seu CPF">
