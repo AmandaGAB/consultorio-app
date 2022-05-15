@@ -13,7 +13,7 @@ export class ConsultasComponent implements OnInit {
 
   consultas = Array<Consulta>();
 
-  displayedColumns: string[] = ['idConsulta', 'dataConsulta', 'especialidade', 'nomeMedico', 'nomePaciente'];
+  displayedColumns: string[] = ['idConsulta', 'dataConsulta', 'especialidade', 'nomeMedico', 'nomePaciente', 'opções'];
 
   constructor(private ConsultasService: ConsultasService, private roteador: Router, private mensagemService: MensagensService) {
 
@@ -35,26 +35,26 @@ export class ConsultasComponent implements OnInit {
   //
   // }
   //
-  // remover(medico: Medico) : void{
-  //
-  //   this.MedicoService.remover(Number(medico.id)).subscribe(
-  //     resposta => {
-  //       const indexUsuarioParaRemover = this.medicos.findIndex(u => u.crm === medico.crm)
-  //
-  //       if(indexUsuarioParaRemover > -1) {
-  //
-  //         this.medicos.splice(indexUsuarioParaRemover, 1)
-  //         this.mensagemService.error('Médico removido com Sucesso!');
-  //         this.ngOnInit()
-  //
-  //
-  //       }
-  //
-  //     }
-  //
-  //   )
-  //
-  // }
+  remover(consulta: Consulta) : void{
+
+    this.ConsultasService.remover(Number(consulta.idConsulta)).subscribe(
+      resposta => {
+        const indexUsuarioParaRemover = this.consultas.findIndex(u => u.idConsulta === consulta.idConsulta)
+
+        if(indexUsuarioParaRemover > -1) {
+
+          this.consultas.splice(indexUsuarioParaRemover, 1)
+          this.mensagemService.error('Consulta removido com Sucesso!');
+          this.ngOnInit()
+
+
+        }
+
+      }
+
+    )
+
+  }
 
 
 }

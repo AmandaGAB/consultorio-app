@@ -12,12 +12,8 @@
           <button mat-menu-item [routerLink]="['/pacientes']">Listagem de Pacientes</button>
           <button mat-menu-item [routerLink]="['/cadastrarPacientes']">Cadastrar Paciente</button>
         </mat-menu>
-        <button [matMenuTriggerFor]="menu3" mat-button>Consultas</button>
-        <mat-menu #menu3="matMenu">
-          <button mat-menu-item [routerLink]="['/cadastrarConsultas']">Cadastrar Consultas</button>
-          <button mat-menu-item [routerLink]="['/consultas']">Listagem Consultas</button>
-        </mat-menu>
-        <button mat-button>Agendamento</button>
+        <button mat-button [routerLink]="['/consultas']">Consultas</button>
+        <button mat-button [routerLink]="['/cadastrarConsultas']">Agendamento</button>
       </div>
     </div>
 
@@ -42,7 +38,7 @@
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label class="texto_label">Data de Nascimento</mat-label>
-              <input autocomplete="on" name="Data de Nascimento" type="date"  [(ngModel)]="paciente.dataDeNascimento" matInput  placeholder="Digite sua data de nascimento"value="">
+              <input autocomplete="on"  name="Data de Nascimento" type="date"  [(ngModel)]="paciente.dataDeNascimento" matInput  placeholder="Digite sua data de nascimento"value="">
             </mat-form-field>
 
             <!--Especialidade-->

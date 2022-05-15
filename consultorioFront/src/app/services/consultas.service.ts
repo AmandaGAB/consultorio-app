@@ -19,4 +19,8 @@ export class ConsultasService {
   inserir(consulta: Consulta): Observable<Consulta>{
     return this.httpClient.post<Consulta>(this.URL_CONSULTAS, consulta)
   }
+  remover(id: number): Observable<object> {
+    return this.httpClient.delete<Consulta>(`${this.URL_CONSULTAS}/${id}`);
+  }
+
 }

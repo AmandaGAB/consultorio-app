@@ -7,7 +7,6 @@
 
 }
 button{
-  width: 10vw;
   border-radius: 10px;
 }
 .listagem{
@@ -21,7 +20,7 @@ button{
   text-align: center;
 }
 mat-card{
-  color: white;
+  color: rgb(255, 255, 255);
   background: rgba(2, 4, 10, 0.64);
 
 
@@ -32,7 +31,7 @@ mat-card{
 
 }
 th{
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Arial";
   font-weight: lighter;
 }
