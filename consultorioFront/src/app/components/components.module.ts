@@ -21,6 +21,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {PipesModule} from "../pipes/pipes.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatDividerModule} from "@angular/material/divider";
+import { ConsultasComponent } from './consultas/consultas.component';
 
 
 
@@ -31,7 +32,8 @@ import {MatDividerModule} from "@angular/material/divider";
     PacientesComponent,
     CadastrarMedicoComponent,
     CadastrarPacienteComponent,
-    CadastrarConsultaComponent
+    CadastrarConsultaComponent,
+    ConsultasComponent
   ],
   imports: [
     CommonModule,

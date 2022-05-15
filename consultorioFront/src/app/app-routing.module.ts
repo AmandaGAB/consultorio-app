@@ -5,6 +5,7 @@ import {CadastrarMedicoComponent} from "./components/cadastrar-medico/cadastrar-
 import {CadastrarPacienteComponent} from "./components/cadastrar-paciente/cadastrar-paciente.component";
 import {PacientesComponent} from "./components/pacientes/pacientes.component";
 import {CadastrarConsultaComponent} from "./components/cadastrar-consulta/cadastrar-consulta.component";
+import {ConsultasComponent} from "./components/consultas/consultas.component";
 
 const routes: Routes = [
   {path: 'medicos', component: MedicosComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'cadastrarPacientes', component: CadastrarPacienteComponent},
   {path: 'pacientes', component: PacientesComponent},
   {path: 'cadastrarConsultas', component: CadastrarConsultaComponent},
+  {path: 'consultas', component: ConsultasComponent}
 ];
 
 @NgModule({
