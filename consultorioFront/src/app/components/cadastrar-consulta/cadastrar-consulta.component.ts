@@ -5,6 +5,9 @@ import {Medico} from "../../model/Medico";
 import {MedicoService} from "../../services/medico.service";
 import {Paciente} from "../../model/Paciente";
 import {PacienteService} from "../../services/paciente.service";
+import {ConsultasService} from "../../services/consultas.service";
+import {DatePipe, formatDate} from "@angular/common";
+import {MAT_DATE_FORMATS} from "@angular/material/core";
 
 
 @Component({
@@ -19,7 +22,7 @@ export class CadastrarConsultaComponent implements OnInit {
   pacientes = Array<Paciente>();
   listaMedicos: any
   listaPacientes: any
-  constructor(private MedicoService: MedicoService, private  PacienteService: PacienteService) { }
+  constructor(private MedicoService: MedicoService, private  PacienteService: PacienteService, private ConsultaService: ConsultasService) { }
 
   ngOnInit(): void {
   this.listaMedicos = this.MedicoService.listar().subscribe(
@@ -30,7 +33,8 @@ export class CadastrarConsultaComponent implements OnInit {
     )
   }
 salvar(): void{
-
+  this.ConsultaService.inserir(this.consulta).subscribe(consulta => console.log(consulta))
+  this.consulta = new Consulta();
 }
 
 

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'pacientes/cadastrar/:id', component: CadastrarPacienteComponent},
   {path: 'cadastrarPacientes', component: CadastrarPacienteComponent},
   {path: 'pacientes', component: PacientesComponent},
-  {path: 'consultas', component: CadastrarConsultaComponent},
+  {path: 'cadastrarConsultas', component: CadastrarConsultaComponent},
 ];
 
 @NgModule({

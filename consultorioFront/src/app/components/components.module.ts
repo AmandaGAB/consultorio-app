@@ -16,6 +16,8 @@ import { CadastrarPacienteComponent } from './cadastrar-paciente/cadastrar-pacie
 import {RouterModule} from "@angular/router";
 import { CadastrarConsultaComponent } from './cadastrar-consulta/cadastrar-consulta.component';
 import {MatSelectModule} from "@angular/material/select";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 
@@ -27,20 +29,22 @@ import {MatSelectModule} from "@angular/material/select";
     CadastrarPacienteComponent,
     CadastrarConsultaComponent
   ],
-    imports: [
-        CommonModule,
-        MatMenuModule,
-        MatButtonModule,
-        MatTableModule,
-        MatCardModule,
-        MatIconModule,
-        MatFormFieldModule,
-        FormsModule,
-        MatInputModule,
-        FlexLayoutModule,
-        RouterModule,
-        MatSelectModule,
-        ReactiveFormsModule
-    ]
+  imports: [
+    CommonModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatTableModule,
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    FlexLayoutModule,
+    RouterModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+  ],
 })
 export class ComponentsModule { }

@@ -14,6 +14,7 @@
       </mat-menu>
       <button [matMenuTriggerFor]="menu3" mat-button>Consultas</button>
       <mat-menu #menu3="matMenu">
+        <button mat-menu-item [routerLink]="['/cadastrarConsultas']">Cadastrar Consultas</button>
         <button mat-menu-item [routerLink]="['/consultas']">Listagem Consultas</button>
       </mat-menu>
       <button mat-button>Agendamento</button>
@@ -55,15 +56,18 @@
 
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label class="texto_azul">Data da Consulta</mat-label>
-            <input autocomplete="on" name="Data de Consulta" type="date"  [(ngModel)]="consulta.dataConsulta" matInput  placeholder="Digite sua data de nascimento"value="">
+            <input matInput [matDatepicker]="picker" autocomplete="on" name="Data da Consulta"  (ngModelChange)="consulta.dataConsulta=$event"  [ngModel]="consulta.dataConsulta"  placeholder="Digite sua data de nascimento"value="">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
 
         </form>
+
       </mat-card-content>
 
       <mat-card-actions>
         <button mat-raised-button mat-icon-button color="blue" id="but" (click)="salvar()">
-          <mat-icon >add</mat-icon>
+          <mat-icon >save</mat-icon>
         </button>
       </mat-card-actions>
     </mat-card>
