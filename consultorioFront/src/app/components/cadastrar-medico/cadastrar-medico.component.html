@@ -1,5 +1,5 @@
-<div class="menu">
-  <div class="main-content">
+
+  <div >
     <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">
       <button [matMenuTriggerFor]="menu1" mat-button>Médico</button>
       <mat-menu #menu1="matMenu">
@@ -11,10 +11,13 @@
         <button mat-menu-item [routerLink]="['/pacientes']">Listagem de Pacientes</button>
         <button mat-menu-item [routerLink]="['/cadastrarPacientes']">Cadastrar Paciente</button>
       </mat-menu>
-      <button mat-button>Consultas</button>
+      <button [matMenuTriggerFor]="menu3" mat-button>Consultas</button>
+      <mat-menu #menu3="matMenu">
+        <button mat-menu-item [routerLink]="['/consultas']">Listagem Consultas</button>
+      </mat-menu>
       <button mat-button>Agendamento</button>
     </div>
-  </div>
+
 
 
   <!--  <mat-card  class="mainContent">-->
