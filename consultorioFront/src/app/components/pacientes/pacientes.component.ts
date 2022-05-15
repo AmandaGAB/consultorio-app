@@ -13,7 +13,7 @@ export class PacientesComponent implements OnInit {
   pacientes = Array<Paciente>();
 
   displayedColumns: string[] = [
-    'dataDeNascimento', 'cpf', 'telefone', 'email', 'sexo', 'endereco', 'opções'];
+    'nome', 'dataDeNascimento', 'cpf', 'telefone', 'email', 'sexo', 'endereco', 'opções'];
 
   constructor(private PacienteService: PacienteService, private roteador: Router) {
 
