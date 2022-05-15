@@ -1,9 +1,9 @@
+import {Especialidade} from '../model/Especialidade';
 export class Medico{
   id!: number;
   crm!:number
   nome!:string;
-  especialidade!:string;
+  especialidade!: Especialidade;
   telefone!:string;
   email!:string;
-  agenda!:string
 }

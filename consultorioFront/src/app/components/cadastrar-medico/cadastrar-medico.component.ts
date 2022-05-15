@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {MedicoService} from "../../services/medico.service";
 import {Medico} from "../../model/Medico";
+import {Especialidade} from "../../model/Especialidade";
 
 @Component({
   selector: 'app-cadastrar-medico',
@@ -10,11 +11,12 @@ import {Medico} from "../../model/Medico";
 })
 export class CadastrarMedicoComponent implements OnInit {
   medico: Medico = new Medico();
-
   operacaoCadastro = true;
-
+  conditionalOperator = Especialidade;
+  especialidades: string[];
   constructor(private  MedicoService: MedicoService, private rotaAtual: ActivatedRoute, private roteador: Router) {
     this.medico = new Medico();
+    this.especialidades = Object.keys(this.conditionalOperator);
     if(this.rotaAtual.snapshot.paramMap.has('id')) {
       this.operacaoCadastro = false;
       const idParaEdicao = Number(this.rotaAtual.snapshot.paramMap.get('id'));

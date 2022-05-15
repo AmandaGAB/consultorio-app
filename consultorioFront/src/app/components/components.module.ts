@@ -8,12 +8,14 @@ import {MatTableModule} from "@angular/material/table";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.component';
 import { CadastrarPacienteComponent } from './cadastrar-paciente/cadastrar-paciente.component';
 import {RouterModule} from "@angular/router";
+import { CadastrarConsultaComponent } from './cadastrar-consulta/cadastrar-consulta.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -22,7 +24,8 @@ import {RouterModule} from "@angular/router";
     MedicosComponent,
     PacientesComponent,
     CadastrarMedicoComponent,
-    CadastrarPacienteComponent
+    CadastrarPacienteComponent,
+    CadastrarConsultaComponent
   ],
     imports: [
         CommonModule,
@@ -35,7 +38,9 @@ import {RouterModule} from "@angular/router";
         FormsModule,
         MatInputModule,
         FlexLayoutModule,
-        RouterModule
+        RouterModule,
+        MatSelectModule,
+        ReactiveFormsModule
     ]
 })
 export class ComponentsModule { }

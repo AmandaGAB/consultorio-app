@@ -96,7 +96,11 @@
           <!--Especialidade-->
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label class="texto_azul">Especialidade</mat-label>
-            <input autocomplete="on" name="especialidade" type="text"[(ngModel)]="medico.especialidade" matInput placeholder="Digite sua especialidade" value="">
+
+            <mat-select [(ngModel)]="medico.especialidade" [ngModelOptions]="{standalone: true}">
+              <mat-option selected *ngFor="let name of especialidades" [value]="name">{{name}}</mat-option>
+<!--              <option autocomplete="on" name="especialidade" type="text"[(ngModel)]="medico.especialidade" matInput placeholder="Digite sua especialidade" value="">-->
+            </mat-select>
           </mat-form-field>
 
           <!--assistencia_id_assistencia-->
