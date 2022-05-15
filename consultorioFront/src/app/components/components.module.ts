@@ -20,6 +20,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {PipesModule} from "../pipes/pipes.module";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatDividerModule} from "@angular/material/divider";
 
 
 
@@ -49,7 +50,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatDatepickerModule,
     MatNativeDateModule,
     PipesModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDividerModule
   ],
 })
 export class ComponentsModule { }

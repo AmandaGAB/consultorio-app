@@ -80,25 +80,25 @@
   <div id="main">
     <mat-card class="example-card">
       <!--    fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center"-->
-      <h2 class="texto_azul titulo-login">Inserir Medico</h2>
+      <h2 class="texto_label titulo-login">Inserir Medico</h2>
 
       <!--Inicio do Form>-->
       <mat-card-content >
         <form class="example-form">
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label class="texto_azul">Nome</mat-label>
+            <mat-label  class="texto_label">Nome</mat-label>
             <input autocomplete="on" name="nome" [(ngModel)]="medico.nome" matInput placeholder="digite seu nome">
           </mat-form-field>
 
           <!--CRM-->
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label class="texto_azul">CRM</mat-label>
+            <mat-label  class="texto_label">CRM</mat-label>
             <input autocomplete="on" name="crm" type="text"  [(ngModel)]="medico.crm" matInput  placeholder="Digite o seu CRM"value="">
           </mat-form-field>
 
           <!--Especialidade-->
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label class="texto_azul">Especialidade</mat-label>
+            <mat-label  class="texto_label">Especialidade</mat-label>
 
             <mat-select [(ngModel)]="medico.especialidade" [ngModelOptions]="{standalone: true}">
               <mat-option selected *ngFor="let name of especialidades" [value]="name">{{name}}</mat-option>
@@ -108,13 +108,13 @@
 
           <!--assistencia_id_assistencia-->
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label class="texto_azul">Telefone</mat-label>
+            <mat-label  class="texto_label">Telefone</mat-label>
             <input autocomplete="on" name="telefone" type="text" [(ngModel)]="medico.telefone" matInput  placeholder="Digite o número do seu telefone"value="" >
           </mat-form-field>
 
           <!--E-mail-->
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label class="texto_azul">E-mail</mat-label>
+            <mat-label class="texto_label">E-mail</mat-label>
             <input autocomplete="on" name="email" type="text"[(ngModel)]="medico.email" matInput placeholder="Digite seu e-mail" value="">
           </mat-form-field>
 

@@ -8,23 +8,37 @@
 }
 button{
   width: 10vw;
+  border-radius: 10px;
 }
 .listagem{
   background-color: #141e27;
   margin-top: 10vh;
+  text-align: center;
 
 }
 .listagemPacientes{
-  background-color: #203239;
   height: auto;
+  text-align: center;
 }
 mat-card{
   color: white;
-  background-color: #203239;
+  background: rgba(2, 4, 10, 0.64);
+
 
 }
 .containerPaciente{
   height: 100vh;
   background-color: #141e27;
 
+}
+th{
+  color: white;
+  font-family: "Arial";
+  font-weight: lighter;
+}
+.mat-cel{
+  color: black;
+}
+td{
+  color: black;
 }
