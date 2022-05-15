@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CpfPipe } from './cpf.pipe';
 import { TelefonePipe } from './telefone.pipe';
 import { MaiusculoPipe } from './maiusculo.pipe';
+import {MinusculoPipe} from "./minusculo.pipe";
 
 
 
@@ -10,12 +11,14 @@ import { MaiusculoPipe } from './maiusculo.pipe';
     declarations: [
         CpfPipe,
         TelefonePipe,
-        MaiusculoPipe
+        MaiusculoPipe,
+        MinusculoPipe
     ],
   exports: [
     CpfPipe,
     TelefonePipe,
-    MaiusculoPipe
+    MaiusculoPipe,
+    MinusculoPipe
   ],
     imports: [
         CommonModule

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {MedicoService} from "../../services/medico.service";
 import {Medico} from "../../model/Medico";
+import {MensagensService} from "../../services/mensagens.service";
 
 @Component({
   selector: 'app-medicos',
@@ -14,7 +15,7 @@ export class MedicosComponent implements OnInit {
 
   displayedColumns: string[] = ['crm', 'nome', 'especialidade', 'telefone', 'email', 'opções'];
 
-  constructor(private MedicoService: MedicoService, private roteador: Router) {
+  constructor(private MedicoService: MedicoService, private roteador: Router, private mensagemService: MensagensService) {
 
   }
 
@@ -43,6 +44,7 @@ export class MedicosComponent implements OnInit {
         if(indexUsuarioParaRemover > -1) {
 
           this.medicos.splice(indexUsuarioParaRemover, 1)
+          this.mensagemService.error('Médico removido com Sucesso!');
           this.ngOnInit()
 
 

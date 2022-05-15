@@ -8,10 +8,11 @@ import {ComponentsModule} from "./components/components.module";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import {FlexLayoutModule} from "@angular/flex-layout";
-
+import {PipesModule} from "./pipes/pipes.module";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,9 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     BrowserAnimationsModule,
     MatIconModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PipesModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

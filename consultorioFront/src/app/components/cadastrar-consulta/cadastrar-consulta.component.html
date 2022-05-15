@@ -39,7 +39,7 @@
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label class="texto_azul">Medicos</mat-label>
             <mat-select [(ngModel)]="consulta.medicoId" [ngModelOptions]="{standalone: true}">
-              <mat-option selected *ngFor="let name of medicos" [value]="name.id">{{name.nome}}</mat-option>
+              <mat-option selected *ngFor="let name of medicos" [value]="name.id">{{name.nome | maiusculo}}</mat-option>
               <!--              <option autocomplete="on" name="especialidade" type="text"[(ngModel)]="medico.especialidade" matInput placeholder="Digite sua especialidade" value="">-->
             </mat-select>
           </mat-form-field>
